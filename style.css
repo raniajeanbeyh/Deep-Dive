@@ -1,0 +1,39 @@
+body {
+  text-align: center;
+}
+#right-wheel,
+#left-wheel {
+  animation: rotation 1s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#motorgirl {
+  animation: girl 1s ease-in-out infinite alternate;
+}
+#hair {
+  animation: blow 1s linear infinite alternate;
+}
+@keyframes rotation {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes girl {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(15deg);
+  }
+}
+@keyframes blow {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(50deg);
+  }
+}
