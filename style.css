@@ -1,5 +1,11 @@
 body {
   text-align: center;
+  font-family: "Barlow", sans-serif;
+}
+
+svg {
+  width: 90vw;
+  height: 45vw;
 }
 #right-wheel,
 #left-wheel {
@@ -8,10 +14,72 @@ body {
   transform-box: fill-box;
 }
 #motorgirl {
-  animation: girl 1s ease-in-out infinite alternate;
+  animation: motorgirl 5s linear infinite;
 }
+
 #hair {
   animation: blow 1s linear infinite alternate;
+}
+#car {
+  animation: driving 10s linear infinite;
+}
+#car2 {
+  animation: driving2 1s linear infinite alternate;
+}
+#wheelchair,
+#dogwalker2 {
+  animation: wheelchair 10s linear infinite alternate;
+  animation-direction: reverse;
+}
+
+#dog-walker,
+#business-woman,
+#guy {
+  animation: driving 20s linear infinite;
+}
+#dogwalker2 {
+  animation: woman 14s linear infinite;
+  animation-direction: reverse;
+}
+@keyframes wheelchair {
+  from {
+    transform: translate(0vw);
+  }
+  to {
+    transform: translateX(50vw);
+  }
+}
+@keyframes motorgirl {
+  from {
+    transform: translateX(0vw);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+@keyframes driving {
+  from {
+    transform: translateX(0vw);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+@keyframes woman {
+  from {
+    transform: translateX(0vw);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+@keyframes driving2 {
+  from {
+    transform: translateX(1vw);
+  }
+  to {
+    transform: translateX(-1vw);
+  }
 }
 @keyframes rotation {
   from {
@@ -21,19 +89,12 @@ body {
     transform: rotateZ(360deg);
   }
 }
-@keyframes girl {
-  from {
-    transform: rotateX(0deg);
-  }
-  to {
-    transform: rotateX(15deg);
-  }
-}
+
 @keyframes blow {
   from {
     transform: rotateX(0deg);
   }
   to {
-    transform: rotateX(50deg);
+    transform: rotateX(7deg);
   }
 }
